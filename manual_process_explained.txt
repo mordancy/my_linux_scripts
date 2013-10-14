@@ -4,7 +4,7 @@ ssh-keygen -t dsa
 chmod 600 .ssh/id_dsa
 
 2) copy the key to the server. You will be prompted for your password.
-scp .ssh/id_dsa.pub <USERID>@<SERVER>
+scp .ssh/id_dsa.pub <USERID>@<SERVER>:
 
 3) copy the file to auth keys and set ssh folder to read/write/execute. You should be prompted for your password
 ssh <USERID>@<SERVER>
