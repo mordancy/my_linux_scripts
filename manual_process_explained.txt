@@ -1,0 +1,19 @@
+Steps:
+1) create your local key and make it read/write for yourself. This should only have to be done once for your local system
+ssh-keygen -t dsa
+chmod 600 .ssh/id_dsa
+
+2) copy the key to the server. You will be prompted for your password.
+scp .ssh/id_dsa.pub <USERID>@<SERVER>
+
+3) copy the file to auth keys and set ssh folder to read/write/execute. You should be prompted for your password
+ssh <USERID>@<SERVER>
+cat id_dsa.pub >> .ssh/authorized_keys
+chmod 700 .ssh
+
+4) remove the file you uploaded
+rm -i id_dsa.pub
+
+5) exit the server and test your ssh connection (no password should be required this time).
+exit
+ssh <USERID>@<SERVER>
