@@ -99,7 +99,7 @@ else
 fi
 
 echo "checking for file .ssh/authorized_keys for user <${USERID}> on server <${SERVER}>"
-if ssh $USER@$SERVER test -e .ssh/authorized_keys
+if ssh $USERID@$SERVER test -e .ssh/authorized_keys
   then
     echo "file .ssh/authorized_keys already exists"
   else
