@@ -5,7 +5,9 @@ QUIT=0
 #If your userid is not a local variable add it here 
 #or use the menu option to change the value 
 #USERID=
-
+SERVERARRAYDEV=(devapp01 devapp02 devdb01 devdb02)
+SERVERARRAYQA=(qaapp01 qaapp02 qadb01 qadb02)
+SERVERARRAYPROD=(prdapp01 prdapp02 prddb01 prddb02)
 
 #####################################################
 # DISPLAY MENU FOR SSH OPTIONS                      #
@@ -41,19 +43,19 @@ case $OPTION in
               generateLocalKey
            ;;
         [dD]) echo "Loading key for development servers"
-              SERVERARRAY=(devapp01 devapp02 devdb01 devdb02)
+              SERVERARRAY="${SERVERARRAYDEV[@]}"
               runserverlist
            ;;
         [qQ]) echo "Loading key for quality assurance servers"
-              SERVERARRAY=(qaapp01 qaapp02 qadb01 qadb02)
+              SERVERARRAY=("${SERVERARRAYQA[@]}"
               runserverlist
            ;;
         [pP]) echo "Loading key for production servers"
-              SERVERARRAY=(prdapp01 prdapp02 prddb01 prddb02)
+              SERVERARRAY="${SERVERARRAYPROD[@]}"
               runserverlist
            ;;
         [aA]) echo "Loading key for all servers"
-              SERVERARRAY=(devapp01 devapp02 devdb01 devdb02 qaapp01 qaapp02 qadb01 qadb02 prdapp01 prdapp02 prddb01 prddb02)
+              SERVERARRAY=( ${SERVERARRAYDEV[@]]} ${SERVERARRAYQA[@]} ${SERVERARRAYPROD[@]]} )
               runserverlist
            ;;
         [sS]) echo "Enter the server name to load the rsa key to:"
