@@ -61,7 +61,7 @@ case $OPTION in
               echo "you entered ${SERVER}"
               runserverlist
            ;;
-        [uU]) echo "Enter a new user id:\n"
+        [uU]) echo "Enter a new user id:"
               read USERID
               echo "you entered ${USERID}"
            ;;
