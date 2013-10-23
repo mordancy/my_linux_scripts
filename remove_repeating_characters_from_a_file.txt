@@ -4,19 +4,19 @@ Here is a way to remove repeating single quote characters from a file and replac
 tr -s \' <  input_file.csv  > output_file.txt
 |   | |  |  |____________|  | |_____________|
 |   | |  |        |         |        |
-|   | |  |        |         |         \____ Output file name
+|   | |  |        |         |        \____ Output file name
 |   | |  |        |         |
-|   | |  |        |          \____ redirect to a file
+|   | |  |        |         \____ redirect to a file
 |   | |  |        |                  
-|   | |  |         \____ Input file name
+|   | |  |        \____ Input file name
 |   | |  |
-|   | |   \____ redirect from a file
+|   | |  \____ redirect from a file
 |   | |
-|   |  \____ input sequence (use backslash when searching for special charachters like single quote)
+|   | \____ input sequence (use backslash when searching for special charachters like single quote)
 |   |
-|    \____ --squeeze-repeats: replaces each input sequence of a repeated character that is listed with a single occurrence of that character
+|   \____ --squeeze-repeats: replaces each input sequence of a repeated character that is listed with a single occurrence of that character
 |
- \____ translate or delete characters
+\____ translate or delete characters
 
 
 Note after the input sequence value you can use another character to compress the repeats into
