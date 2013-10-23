@@ -1,0 +1,27 @@
+Here is a way to remove repeating single quote characters from a file and replace them with an individual sigle quote (or other charachter of your choosing)
+
+
+tr -s \' <  input_file.csv  > output_file.txt
+|   | |  |  |____________|  | |_____________|
+|   | |  |        |         |        |
+|   | |  |        |         |         \____ Output file name
+|   | |  |        |         |
+|   | |  |        |          \____ redirect to a file
+|   | |  |        |                  
+|   | |  |         \____ Input file name
+|   | |  |
+|   | |   \____ redirect from a file
+|   | |
+|   |  \____ input sequence (use backslash when searching for special charachters like single quote)
+|   |
+|    \____ --squeeze-repeats: replaces each input sequence of a repeated character that is listed with a single occurrence of that character
+|
+ \____ translate or delete characters
+
+
+Note after the input sequence value you can use another character to compress the repeats into
+examples:
+1) example: to remove repeated single quotes and replace them with a colon type:
+   tr -s \' : < input_file.csv  > output_file.txt
+2) to remove repeated single quotes and replace them with a pipe type (notice the backslash in front of the special character pipe):
+   tr -s \' \| < input_file.csv  > output_file.txt
