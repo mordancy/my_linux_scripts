@@ -1,7 +1,4 @@
-
-
-
-
+awk is used to break up text into columns
 
 Different ways to view the users on a system using awk. Lists the user, home directory and 
 awk -F":" '{ print $1"\t"$6"\t"$7}' /etc/passwd
@@ -13,11 +10,14 @@ awk -F"/|\"" '{ print $2$3$4"|"$5}' file.txt > newfile.txt
 
 
 #turn a fixed width file into a comma seperated file
+awk -v FIELDWIDTHS='25 5 5 10 6' -v OFS=',' '{ $1=$1 ""; print }' filexwidthfile.txt  > commaseperatedfile.csv
+
+#alternative method
 awk '{
     one=substr($0,1,24)
-    two=substr($0,25,30)
-    three=substr($0,31,35)
-    four=substr($0,36,40)
-    five=substr($0,41)
+    two=substr($0,25,5)
+    three=substr($0,30,5)
+    four=substr($0,35,10)
+    five=substr($0,40)
 printf ("%s,%s,%s,%s,%s\n", one, two, three, four, five)
 }' filexwidthfile.txt  > commaseperatedfile.csv
