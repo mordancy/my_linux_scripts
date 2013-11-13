@@ -1,0 +1,23 @@
+
+
+
+
+
+Different ways to view the users on a system using awk. Lists the user, home directory and 
+awk -F":" '{ print $1"\t"$6"\t"$7}' /etc/passwd
+awk -F":" '{ print "User: <"$1">\n\thas home directory: <"$6">\n\tand uses the shell: <"$7">\n"}' /etc/passwd
+
+
+#delimit a rowusing | or " then put columns 2, 3, and 4 together then a pipe and the 5th column
+awk -F"/|\"" '{ print $2$3$4"|"$5}' file.txt > newfile.txt
+
+
+#turn a fixed width file into a comma seperated file
+awk '{
+    one=substr($0,1,24)
+    two=substr($0,25,30)
+    three=substr($0,31,35)
+    four=substr($0,36,40)
+    five=substr($0,41)
+printf ("%s,%s,%s,%s,%s\n", one, two, three, four, five)
+}' filexwidthfile.txt  > commaseperatedfile.csv
