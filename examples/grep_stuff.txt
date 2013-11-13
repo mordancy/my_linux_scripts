@@ -1,0 +1,38 @@
+
+#use a file with values or patterns that you want to pull out of an input file
+#and pipe the results to an output file 
+grep -f fileterFile.txt inputfile.txt > outputFileMatches.txt
+  |   | |_____________| |___________| | |___________________|
+  |   |        |              |       |          |
+  |   |        |              |       |           \_ file to output records
+  |   |        |              |       |
+  |   |        |              |        \_ used to pipe the results to a command or file
+  |   |        |              |
+  |   |        |               \_ file that you are seraching for the values
+  |   |        |
+  |   |         \_ use a file with parrterns for grep to use when searching the file
+  |   |  
+  |    \_ flag designates to use a file for pattern matching
+  |
+   \_ grep will search a file or input based on a pattern
+
+   
+   
+#use a file with values or patterns that you do not want in the output file 
+grep -v -f fileterFile.txt inputfile.txt > outputFileFiltered.txt
+  |   |  | |_____________| |___________| | |____________________|
+  |   |  |        |              |       |           |
+  |   |  |        |              |       |            \_ file to output records
+  |   |  |        |              |       |
+  |   |  |        |              |        \_ used to pipe the results to a command or file
+  |   |  |        |              |
+  |   |  |        |               \_ file that you are seraching for the values
+  |   |  |        |
+  |   |  |         \_ use a file with parrterns for grep to use when searching the file
+  |   |  |
+  |   |   \_ flag designates to use a file for pattern matching
+  |   |
+  |    \_ flag to invert-match
+  |
+   \_ grep will search a file or input based on a pattern
+
