@@ -1,0 +1,23 @@
+#remove windows line feeds from a file
+vi: %s/^M//g   
+(to create ^M type ctrl+v the ctrl+m)
+
+
+
+
+
+
+
+#for vim use .vimrc
+:set number
+:set ruler
+:syntax enable
+:set background=dark
+:set mouse=a
+
+
+
+#for vi in AIX use .exrc
+set nu
+set showmatch
+set showmode
