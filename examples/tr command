@@ -1,5 +1,6 @@
-Here is a way to remove repeating single quote characters from a file and replace them with an individual sigle quote (or other charachter of your choosing)
+tr translates or replaces values
 
+Here is a way to remove repeating single quote characters from a file and replace them with an individual sigle quote (or other charachter of your choosing)
 
 tr -s \' <  input_file.csv  > output_file.txt
 |   | |  |  |____________|  | |_____________|
