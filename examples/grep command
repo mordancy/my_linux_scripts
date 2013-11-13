@@ -1,4 +1,3 @@
-
 #use a file with values or patterns that you want to pull out of an input file
 #and pipe the results to an output file 
 grep -f fileterFile.txt inputfile.txt > outputFileMatches.txt
