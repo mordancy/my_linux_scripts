@@ -37,6 +37,7 @@ diff
 du
 env
 find
+fortune
 git --tutorial
 gzip,gunzip
 head
