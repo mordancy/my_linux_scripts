@@ -1,0 +1,20 @@
+#split is used to cut a file into smaller pieces
+
+#split a large file into serveral files with 100,000 lines each
+split -l 100000 filesname.txt
+|___|  | |____| |___________|
+  |    |    |         |
+  |    |    |          \_ file to split
+  |    |    |
+  |    |     \_ maximum number of lines to put in each file
+  |    |
+  |     \_ l flag splits the file on a specific number of lines
+  |
+   \_ command to split a file into smaller pieces
+
+#assuming the file has 301,999 lines the output would be
+# xaa (file with 100k lines)
+# xab (file with 100k lines)
+# xac (file with 100k lines)
+# xad (file with 1999 lines)
+
