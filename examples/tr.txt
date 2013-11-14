@@ -30,12 +30,23 @@ examples:
 
 
 #convert Windows CRLFs to LFs
-tr -d \r
+tr -d \r windowsfile.txt > linuxfile.txt
+|   | |  |____________|  | |___________|
+|   | |         |        |       |
+|   | |         |        |        \_ Output file name
+|   | |         |        |
+|   | |         |         \_ redirect to a file
+|   | |         |
+|   | |          \_  Input file name
 |   | |
 |   |  \____ windows carriage return
 |   |
 |    \____ -d flag deletes
 |
  \____ translate or delete characters
+
+
+#convert Windows CRLFs to LFs using the hex value for carriage return
+tr -d '\015' windowsfile.txt > linuxfile.txt
 
 
