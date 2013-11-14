@@ -26,3 +26,16 @@ examples:
    tr -s \' : < input_file.csv  > output_file.txt
 2) to remove repeated single quotes and replace them with a pipe type (notice the backslash in front of the special character pipe):
    tr -s \' \| < input_file.csv  > output_file.txt
+
+
+
+#convert Windows CRLFs to LFs
+tr -d \r
+|   | |
+|   |  \____ windows carriage return
+|   |
+|    \____ -d flag deletes
+|
+ \____ translate or delete characters
+
+
