@@ -3,11 +3,6 @@ vi: %s/^M//g
 (to create ^M type ctrl+v the ctrl+m)
 
 
-
-
-
-
-
 #for vim use .vimrc
 :set number
 :set ruler
@@ -21,3 +16,15 @@ vi: %s/^M//g
 set nu
 set showmatch
 set showmode
+
+
+TODO: split vim into multiple panes
+TODO: show directory navigation menu in a pane
+TODO: show files side by side
+TODO: replace a column in a file
+TODO: cut or paste into a column of a file
+TODO: cut and paste
+TODO: change the color schema
+TODO: code syntax highlighting
+TODO: compile from vim
+TODO: save using sudo frmo within vim
