@@ -1,0 +1,39 @@
+#replace values from one file and out put to another file
+sed 's/values/replacement/g' < inputfile.txt > outputfile.txt
+|_|  | |____| |_________| |  | |___________| | |____________|
+ |   |    |       |       |  |       |       |       |
+ |   |    |       |       |  |       |       |        \_ file to out put the results
+ |   |    |       |       |  |       |       |
+ |   |    |       |       |  |       |        \_ pipe into file
+ |   |    |       |       |  |       |
+ |   |    |       |       |  |        \_ input file to send to the sed command
+ |   |    |       |       |  |
+ |   |    |       |       |   \_  input from a file
+ |   |    |       |       |
+ |   |    |       |        \_  replace globally
+ |   |    |       |
+ |   |    |        \_  value to replace 
+ |   |    |
+ |   |     \_  value to search for, to be replaced
+ |   |
+ |    \_  search
+ |
+  \_  string editor command
+ 
+
+#change the delimiter in a file from pipe to a comma in place
+sed -i 's/|/,/g' datafile.txt
+
+#replace commas with new lines in a file
+sed -i 's/,/\n/g'  originalfile.csv
+
+sed -i 
+
+#AIX does not support "\n" for new line
+#instead you need to escape the new line and <enter> to use an actual new line
+#AIX sed does not support inline editing ( -i flag ) 
+#to fix this output the results to a new file then mv temp file back to original file
+#example:     sed 's/,/\<enter>/g'
+sed 's/,/\
+/g'  originalfile.csv > originalfile.tmp
+mv originalfile.tmp originalfile.csv
