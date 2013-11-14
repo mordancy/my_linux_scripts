@@ -17,7 +17,17 @@ set nu
 set showmatch
 set showmode
 
+#navigation
+  
+     k
+  h  +  l
+     j
 
+
+
+
+TODO: simple navigation
+TODO: turn on visual mode that highlights text as you select it
 TODO: split vim into multiple panes
 TODO: show directory navigation menu in a pane
 TODO: show files side by side
@@ -27,4 +37,6 @@ TODO: cut and paste
 TODO: change the color schema
 TODO: code syntax highlighting
 TODO: compile from vim
-TODO: save using sudo frmo within vim
+TODO: save using sudo from within vim
+
+
