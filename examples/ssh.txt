@@ -1,0 +1,17 @@
+ssh - secure shell
+
+
+#source a file then run a script on a remote server
+ssh user@host.tld "source ~/.bashrc; /path/awesome_script.sh"
+
+
+
+
+
+Other commands to show examples:
+ssh-add
+ssh-agent
+ssh-keygen
+ssh-keyscan
+
+
