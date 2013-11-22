@@ -2,7 +2,7 @@ ssh - secure shell
 
 
 #source a file then run a script on a remote server
-ssh user@host.tld "source ~/.bashrc; /path/awesome_script.sh"
+ssh user@hostname.tld "source ~/.bashrc; /path/awesome_script.sh"
 
 
 
