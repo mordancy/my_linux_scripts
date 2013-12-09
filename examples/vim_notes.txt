@@ -11,11 +11,15 @@ vi: %s/^M//g
 :set mouse=a
 
 
+#change permissions of file while open in vim
+:!chmod +w %
+
 
 #for vi in AIX use .exrc
 set nu
 set showmatch
 set showmode
+
 
 #navigation
   
