@@ -35,3 +35,25 @@ grep -v -f fileterFile.txt inputfile.txt > outputFileFiltered.txt
   |
    \_ grep will search a file or input based on a pattern
 
+
+#search for files that contain tabs
+grep -P '\t' filename.txt
+  |   |  |   |__________|
+  |   |  |        |
+  |   |  |        |
+  |   |  |        |
+  |   |  |        |
+  |   |  |        |
+  |   |  |        |
+  |   |  |        |
+  |   |  |         \_ use a file with parrterns for grep to use when searching the file
+  |   |  |
+  |   |   \_ parameter to search for tab characters
+  |   |
+  |    \_ flag to use perl regex
+  |
+   \_ grep will search a file or input based on a pattern
+
+
+
+
