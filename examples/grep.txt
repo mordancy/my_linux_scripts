@@ -9,7 +9,7 @@ grep -f fileterFile.txt inputfile.txt > outputFileMatches.txt
   |   |        |              |
   |   |        |               \_ file that you are seraching for the values
   |   |        |
-  |   |         \_ use a file with parrterns for grep to use when searching the file
+  |   |         \_ use a file with patterns for grep to use when searching the file
   |   |  
   |    \_ flag designates to use a file for pattern matching
   |
@@ -27,7 +27,7 @@ grep -v -f fileterFile.txt inputfile.txt > outputFileFiltered.txt
   |   |  |        |              |
   |   |  |        |               \_ file that you are seraching for the values
   |   |  |        |
-  |   |  |         \_ use a file with parrterns for grep to use when searching the file
+  |   |  |         \_ use a file with patterns for grep to use when searching the file
   |   |  |
   |   |   \_ flag designates to use a file for pattern matching
   |   |
@@ -46,7 +46,7 @@ grep -P '\t' filename.txt
   |   |  |        |
   |   |  |        |
   |   |  |        |
-  |   |  |         \_ use a file with parrterns for grep to use when searching the file
+  |   |  |         \_ use a file with patterns for grep to use when searching the file
   |   |  |
   |   |   \_ parameter to search for tab characters
   |   |
