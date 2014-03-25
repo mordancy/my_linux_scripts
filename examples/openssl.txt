@@ -1,0 +1,11 @@
+
+
+
+#Encrypt files with blowfish
+#a sigflup hpr: http://hackerpublicradio.org/eps.php?id=1471
+
+#encrypting:
+openssl bf -e < my_file > my_file.bf
+#decrypting:
+openssl bf -d < my_file.bf > my_file
+
