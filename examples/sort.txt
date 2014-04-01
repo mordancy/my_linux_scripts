@@ -1,0 +1,67 @@
+sort can be used to sort data.
+
+sort a file and display it in the in the console (standard output)
+sort unsorted_file.txt 
+|__| |_______________|
+ |          |
+ |          |
+ |          |
+ |          |
+ |          |
+ |           \____ file to be sorted
+ |
+ \____ command to sort
+
+
+sort a file and send the output into a new file
+sort unsorted_file.txt > sorted_file.txt
+|__| |_______________| | |_______________|
+ |          |          |        |
+ |          |          |        \____ output file name to put the sorted records
+ |          |          |
+ |          |          \____ send standard output to a new file
+ |          | 
+ |           \____ file to be sorted
+ |
+ \____ command to sort
+
+
+sort a file and send the output into a new file
+sort unsorted_file.txt >> append_sorted_file.txt
+|__| |_______________| | |_____________________|
+ |          |          |           |
+ |          |          |           \____ output file name to put the sorted records
+ |          |          |
+ |          |          \____ append standard output to an existing file
+ |          | 
+ |           \____ file to be sorted
+ |
+ \____ command to sort
+
+
+sort file and save to another filename
+sort -o sorted_file.txt unsorted_file.txt
+|__|  | |_____________| |_______________|
+ |    |        |                |
+ |    |        |                \____ file to be sorted
+ |    |        | 
+ |    |        \____ output file name to put the sorted records
+ |    |
+ |    \____ flag to send standard output to a file
+ |
+ \____ command to sort
+
+
+sort file and save to same filename
+sort -o filename.txt filename.txt
+|__|  | |__________| |__________|
+ |    |      |             |
+ |    |      |             \____ file to be sorted
+ |    |      | 
+ |    |      \____ output the sorted records into the same file name
+ |    |
+ |    \____ flag to send standard output to a file
+ |
+ \____ command to sort
+
+
