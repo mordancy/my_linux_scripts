@@ -1,0 +1,71 @@
+
+
+#search bash history
+<ctrl> + r then type what you are looking for 
+#keep searching the historyafter the first pass
+<ctrl> + r 
+#if vi is the default editor
+<esc> then k
+
+#vi windows carriage return 
+#To enter ^M, type CTRL-V, then CTRL-M. That is, hold down the CTRL key then press V and M
+#<crtl> + M = "\r | ^M"
+<crtl> + V then <crtl> + M
+
+#vi - convert a text file from windows to unix format
+vi filename
+<esc> then :%s/^M//g
+
+
+
+#vi undo change
+<esc> + u
+<esc> + X
+
+#vi backspace
+<ctrl> + ?
+
+
+#verbose output for bash scripts (helpful for debugging)
+bash -x script.sh
+
+#add verbose output to a bash scripts for every execution add this to the first line of the file
+#assuming bash is located in /bin/bash
+#!/bin/bash/ -x
+
+
+#get the pid(s) for a process
+ps -ef | grep process_to-search_for | awk '{print $2}'
+
+
+#Create a directory and cd to it
+mkdir foldername && cd $_
+
+
+#split a file into files with a specific maximum number of lines per file
+split -l 5000 filename_to_split
+
+
+#continually tail a file in the back ground
+tail -f filename &
+
+
+#tar a directory
+tar -cvf filename.tar ./directory_name
+#extract a tarfile
+tar -xvf filename.tar
+
+#compress files verbosly with maximum compression
+zip -9v filename.zip files*.txt
+#compress files verbosly with maximum compression and delete original
+zip -9vm filename.zip files*.txt
+
+
+#find a file
+find . -name file_to_search_for -print
+
+
+
+
+
+
