@@ -21,3 +21,7 @@ awk '{
     five=substr($0,40)
 printf ("%s,%s,%s,%s,%s\n", one, two, three, four, five)
 }' filexwidthfile.txt  > commaseperatedfile.csv
+
+--awk command to make pad spaces to a file to make a 80 character fixed width file
+awk '{printf "%-80s\n", $0}' FILENAME
+awk '{printf "%-80s\n", $0}' onefile > twofile
