@@ -1,0 +1,53 @@
+Execution sequence for interactive login shell.
+
+/etc/profile  (global file)
+~/.bash_profile
+~/.bashrc
+~/.bash_login
+~/.profile
+~/.bash_logout
+
+
+/etc/profile (executed for everyone)
+     |
+/------------\
+| is this    |
+| a login    |------------ no --------- source the file ~/.bashrc
+| shell?     |
+| ie not ssh |
+\------------/
+     |
+     |
+     |
+    yes (source the first file in this list) 
+     |
+     |
+  ~/.bash_profile
+  ~/.bash_login
+  ~/.profile
+     
+and when you logout of the shell or exit, source the ~/.bash_logout file if it exists
+
+
+
+I always create a .bash_profile and add the following (then everything uses .bashrc):
+# source the users bashrc if it exists
+if [ -f "${HOME}/.bashrc" ] ; then
+  source "${HOME}/.bashrc"
+fi
+
+
+
+In my .bashrc I add the following to source a file specifically for aliases and custom functions
+# Aliases
+if [ -f "${HOME}/.bash_aliases" ]; then
+  source "${HOME}/.bash_aliases"
+fi
+
+
+# Functions
+if [ -f "${HOME}/.bash_functions" ]; then
+  source "${HOME}/.bash_functions"
+fi
+
+
