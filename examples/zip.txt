@@ -1,0 +1,44 @@
+#Zip all txt files in the current directory
+zip file.zip *.txt
+|_| |______| |___|
+ |     |        | 
+ |     |         \_ file or files to archive
+ |     |
+ |      \_ archive file name
+ |
+  \_ archive command 
+
+
+#Zip all txt files in the current directory
+zip -R file.zip my_folder
+|_| |  |______| |_______|
+ |  |      |        | 
+ |  |      |         \_ folder to archive
+ |  |      |
+ |  |       \_ archive file name
+ |  |
+ |   \_ flag to recurse the directory
+ |
+  \_ archive command 
+
+
+#Zip all txt files in a directory recursively
+#use maximum compression, move the files to the zip file
+#display information to the screen while processing
+zip -9Rvm file.zip my_folder
+|_| |___| |______| |_______|
+ |    |       |        |
+ |    |       |         \_ folder to archive
+ |    |       |
+ |    |        \_ archive file name
+ |    |
+ |    \_ flags
+ |        9 for maximum compression
+ |        R for recursive to archive everything in the folder
+ |        v for verbose output to the screen so you can view the progress
+ |        m for move the files to the archive
+ |
+  \_ archive command 
+
+
+
