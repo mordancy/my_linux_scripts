@@ -1,0 +1,24 @@
+#list the contents of a zip archive file
+unzip -l file.zip
+|____| | |______|
+  |    |     |
+  |    |      \_ zip file
+  |    |
+  |     \_ flag to list the contents of the zip file
+  |
+  \_ unzip command for uncompressing archive files
+
+
+#extract a sinlge file from a zip archive
+unzip -d . file.zip file.txt
+|____| | | |______| |______|
+  |    | |    |        |
+  |    | |    |         \_ file you want to extract. include path if needed
+  |    | |    | 
+  |    | |     \_ zip file
+  |    | |
+  |    |  \_ path to extract to (. = this directory)
+  |    |
+  |     \_ flag to decompress the contents of the zip file
+  |
+  \_ unzip command for uncompressing archive files
