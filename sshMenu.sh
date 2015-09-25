@@ -163,7 +163,9 @@ runserverlist(){
 for SERVER in ${SERVERARRAY[*]}
 do
     echo "RUNNING loadscp for <${USERID}> to server <${SERVER}>"
-    loadscp
+    #removed function to take advantage of the newer ssh-copy-id command
+    #loadscp
+    ssh-copy-id $USERID@$SERVER 
 done
 
 }
