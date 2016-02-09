@@ -9,3 +9,12 @@ openssl bf -e < my_file > my_file.bf
 #decrypting:
 openssl bf -d < my_file.bf > my_file
 
+
+
+
+--view the details of a digital certificate .cer file
+openssl x509 -in cerfile.cer -noout -text
+
+--view the details of a digital certificate signing request file
+openssl req -in certificate.csr -noout -text
+
