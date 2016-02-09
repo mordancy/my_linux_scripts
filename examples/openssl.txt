@@ -18,3 +18,16 @@ openssl x509 -in cerfile.cer -noout -text
 --view the details of a digital certificate signing request file
 openssl req -in certificate.csr -noout -text
 
+--view the details of a digital certificate signing request file
+openssl req -text -noout -verify -in certificate.csr
+
+
+--error  Expecting: TRUSTED CERTIFICATE
+--try these
+openssl x509 -text -inform DER -in domain.com.crt 
+openssl x509 -text -inform PEM -in domain.com.crt 
+openssl x509 -text -inform DER -in domain.com.cer 
+openssl x509 -text -inform PEM -in domain.com.cer
+
+
+
