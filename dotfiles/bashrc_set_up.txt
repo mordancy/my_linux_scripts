@@ -1,5 +1,6 @@
-Execution sequence for interactive login shell.
+Execution sequence for interactive login shell. (check the man page for bash for more information)
 
+/bin/bash
 /etc/profile  (global file)
 ~/.bash_profile
 ~/.bashrc
