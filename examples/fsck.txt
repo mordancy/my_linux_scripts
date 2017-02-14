@@ -1,0 +1,28 @@
+
+#fsck Check and repair a Linux filesystem.
+fsck /dev/sda2
+
+
+#sudo apt-get install dosfstools
+
+#dosfsck Check and repair MS-DOS filesystems
+#-w writeimmediately.
+#-r repair filesystem
+#-l list path names processed.
+#-a automatically fix errors.
+#-v  Verbose.
+#-t mark unreadable clusters as bad.
+sudo dosfsck -w -r -l -a -v -t /dev/sdc1
+
+
+
+
+
+fsck.ext4 -cDfty -C 0 /dev/sd**
+-c – check for bad sectors
+-D – optimize directories if possible
+-f – force check, even if filesystem seems clean
+-t – print timing stats (use -tt for more)
+-y – assume answer “yes” to all questions (such as, “do you want to continue”)
+-C 0 – print progress info to stdout
+/dev/sd** – the partition to check, e.g. /dev/sda1 for first partition (1) on first hard disk (a), etc.
