@@ -77,14 +77,14 @@ case $OPTION in
 #  GENERATE LOCAL RSA KEY IF IT DOESNT EXIST        #
 #####################################################
 generateLocalKey(){
-if [ -f ~/.ssh/id_dsa.pub ]
+if [ -f ~/.ssh/id_rsa.pub ]
   then
-    echo ".ssh/id_dsa.pub already exists"
+    echo ".ssh/id_rsa.pub already exists"
 else
-  echo ".ssh/id_dsa.pub does not exists ... running ssh-keygen"
+  echo ".ssh/id_rsa.pub does not exists ... running ssh-keygen"
   echo "Press enter for all three inputs"
-  ssh-keygen -t dsa;
-  chmod 600 .ssh/id_dsa
+  ssh-keygen -t rsa;
+  chmod 600 .ssh/id_rsa
 fi
 }
 
@@ -93,9 +93,9 @@ fi
 #  FOR THE VALUE IN $SERVER                         #
 #####################################################
 loadscp(){
-if [ -f .ssh/id_dsa.pub ]
+if [ -f .ssh/id_rsa.pub ]
   then
-    echo "uploading .ssh/id_dsa.pub for <${USERID}> to server <${SERVER}>"
+    echo "uploading .ssh/id_rsa.pub for <${USERID}> to server <${SERVER}>"
 else
   generateLocalKey
 fi
